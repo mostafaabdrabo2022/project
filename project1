@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the frist number");                       //for reading the first number.
+            int num1 = int.Parse(Console.ReadLine());                          //integrate the num1 from user.
+            Boolean flag = true;                                               //check the number is prime 
+            Console.WriteLine("Enter the end number");                         //for reading the end number.
+            int num2 = int.Parse(Console.ReadLine());                          //integrate the num2 from user.
+            Console.WriteLine("prime numbers between" + num1 + "and" + num2);  //for reading the processing.
+            for (int k = num1; k <= num2; k++)                                 //this loop iterate another loop.
+            {
+                for (int i = 2; i < k; i++)                                    //illustrate that loop.
+                {
+                    if ((k % i) == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+
+                }
+                if (flag == true)
+                {
+                    Console.WriteLine(k);
+                }
+                flag = true;
+            }
+        }
+    }
+}
